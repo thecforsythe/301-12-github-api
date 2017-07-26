@@ -2,7 +2,12 @@
 
 // Let's make an AJAX call to the GitHub API and then do a simple render of the data into the DOM
 
-$.get('/github/user/repos')
+$.ajax({
+
+  url: '/github/user/repos',
+  method: 'GET',
+
+})
 .then(
   // render the data
   data => {
